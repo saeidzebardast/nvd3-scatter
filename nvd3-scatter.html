@@ -1,0 +1,37 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../nvd3-behavior/nvd3-behavior.html">
+
+<!--
+An element to create line chart using nvd3.
+
+Example:
+
+    <nvd3-scatter data="[[data]]"></nvd3-scatter>
+
+@group NVD3 Elements
+@element nvd3-scatter
+@demo demo/index.html
+@hero hero.svg
+-->
+
+<dom-module id="nvd3-scatter">
+  <template>
+    <div>
+      <svg id="svg"></svg>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'nvd3-scatter',
+      behaviors: [NVD3.ChartBehavior],
+
+      attached: function () {
+        this.set('svg', this.$.svg);
+        this.set('chart', nv.models.scatterChart());
+
+        this.generateChart();
+      }
+    });
+  </script>
+</dom-module>
