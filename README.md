@@ -51,6 +51,9 @@ bower install nvd3-scatter
 ]
 ```
 
+## Demo and Options
+See the [component page](http://saeidzebardast.github.io/nvd3-scatter) for demo and options.
+
 ## License
 
 MIT © [Saeid Zebardast](http://zebardast.com)
